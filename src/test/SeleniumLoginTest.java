@@ -22,6 +22,7 @@ public class SeleniumLoginTest {
 		driver.get(Constants.baseUrl);
 
 		driver.switchTo().frame("login_frame");
+		driver.findElement(By.xpath("//*[@id='switcher_plogin']")).click();
 		WebElement emailField = driver.findElement(By.id("u"));
 		emailField.sendKeys(Constants.account);
 

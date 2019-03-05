@@ -27,9 +27,17 @@ public class TestingSteps {
 		driver.get(Constants.baseUrl);
 	}
 
+//	@When("^Click userLoginLink$")
+//	public void clickLoginLink(){
+//		
+//	}
+	
 	@When("^User enters UserName and Password$")
 	public void user_enters_UserName_and_Password() {
+		
 		driver.switchTo().frame("login_frame");
+		
+		driver.findElement(By.xpath("//*[@id='switcher_plogin']")).click();
 		
 		WebElement emailField = driver.findElement(By.id("u"));
 		emailField.sendKeys(Constants.account);
