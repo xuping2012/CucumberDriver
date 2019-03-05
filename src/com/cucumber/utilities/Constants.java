@@ -1,4 +1,4 @@
-package utilities;
+package com.cucumber.utilities;
 
 public class Constants {
 	public static String  account="125197291@qq.com";

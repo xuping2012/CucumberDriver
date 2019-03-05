@@ -1,4 +1,4 @@
-package test;
+package com.cucumber.test;
 
 import cucumber.api.junit.Cucumber;
 
