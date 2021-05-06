@@ -1,0 +1,262 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1292495100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HooksTest.beforeScenario(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 3205200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HooksTest.BeforeSteps()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "Successful Login with Valid Credentials",
+        "description": "",
+        "id": "login-action;successful-login-with-valid-credentials;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 61700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HooksTest.AfterSteps(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 627635400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HooksTest.AfterSteps()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 62428800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on Home Page",
+            "match": {
+              "location": "Parameters.user_is_on_Home_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 35400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User Navigate to LogIn Page",
+            "match": {
+              "location": "Parameters.user_Navigate_to_LogIn_Page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1318800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User enters \"testuser_1\" and \"Test@153\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "testuser_1",
+                  "offset": 13
+                },
+                {
+                  "val": "Test@153",
+                  "offset": 30
+                }
+              ],
+              "location": "Parameters.user_enters_and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 28900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Message displayed Login Successfully",
+            "match": {
+              "location": "Parameters.message_displayed_Login_Successfully()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Regression"
+          },
+          {
+            "line": 3,
+            "name": "@Parameters"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1282756900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HooksTest.beforeScenario(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 61000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HooksTest.BeforeSteps()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "Successful Login with Valid Credentials",
+        "description": "",
+        "id": "login-action;successful-login-with-valid-credentials;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 33600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HooksTest.AfterSteps(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 643438600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HooksTest.AfterSteps()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 66400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on Home Page",
+            "match": {
+              "location": "Parameters.user_is_on_Home_Page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 36000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User Navigate to LogIn Page",
+            "match": {
+              "location": "Parameters.user_Navigate_to_LogIn_Page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 73400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User enters \"testuser_2\" and \"Test@153\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "testuser_2",
+                  "offset": 13
+                },
+                {
+                  "val": "Test@153",
+                  "offset": 30
+                }
+              ],
+              "location": "Parameters.user_enters_and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 28600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Message displayed Login Successfully",
+            "match": {
+              "location": "Parameters.message_displayed_Login_Successfully()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Regression"
+          },
+          {
+            "line": 3,
+            "name": "@Parameters"
+          }
+        ]
+      }
+    ],
+    "name": "Login Action",
+    "description": "",
+    "id": "login-action",
+    "keyword": "Feature",
+    "uri": "parameters.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Regression"
+      }
+    ]
+  }
+]

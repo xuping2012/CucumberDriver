@@ -1,110 +1,274 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("logintest.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("parameters.feature");
 formatter.feature({
-  "line": 1,
-  "name": "Login",
-  "description": "Description: This feature will test Login functionality",
-  "id": "login",
-  "keyword": "Feature"
-});
-formatter.scenario({
-  "line": 4,
-  "name": "Successful Login with valid credentials",
+  "line": 2,
+  "name": "Login Action",
   "description": "",
-  "id": "login;successful-login-with-valid-credentials",
-  "type": "scenario",
-  "keyword": "Scenario"
+  "id": "login-action",
+  "keyword": "Feature",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@Regression"
+    }
+  ]
+});
+formatter.scenarioOutline({
+  "line": 4,
+  "name": "Successful Login with Valid Credentials",
+  "description": "",
+  "id": "login-action;successful-login-with-valid-credentials",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 3,
+      "name": "@Parameters"
+    }
+  ]
 });
 formatter.step({
   "line": 5,
-  "name": "User is on Login Page",
+  "name": "User is on Home Page",
   "keyword": "Given "
 });
 formatter.step({
   "line": 6,
-  "name": "User enters UserName and Password",
+  "name": "User Navigate to LogIn Page",
   "keyword": "When "
 });
 formatter.step({
   "line": 7,
-  "name": "Click Login button",
+  "name": "User enters \"\u003cusername\u003e\" and \"\u003cpassword\u003e\"",
   "keyword": "And "
 });
 formatter.step({
   "line": 8,
-  "name": "He can visit mail home page",
+  "name": "Message displayed Login Successfully",
   "keyword": "Then "
 });
-formatter.step({
+formatter.examples({
   "line": 9,
-  "name": "Account name is displayed",
+  "name": "",
+  "description": "",
+  "id": "login-action;successful-login-with-valid-credentials;",
+  "rows": [
+    {
+      "cells": [
+        "username",
+        "password"
+      ],
+      "line": 10,
+      "id": "login-action;successful-login-with-valid-credentials;;1"
+    },
+    {
+      "cells": [
+        "testuser_1",
+        "Test@153"
+      ],
+      "line": 11,
+      "id": "login-action;successful-login-with-valid-credentials;;2"
+    },
+    {
+      "cells": [
+        "testuser_2",
+        "Test@153"
+      ],
+      "line": 12,
+      "id": "login-action;successful-login-with-valid-credentials;;3"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.before({
+  "duration": 1292495100,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3205200,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 11,
+  "name": "Successful Login with Valid Credentials",
+  "description": "",
+  "id": "login-action;successful-login-with-valid-credentials;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@Regression"
+    },
+    {
+      "line": 3,
+      "name": "@Parameters"
+    }
+  ]
+});
+formatter.step({
+  "line": 5,
+  "name": "User is on Home Page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "User Navigate to LogIn Page",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 7,
+  "name": "User enters \"testuser_1\" and \"Test@153\"",
+  "matchedColumns": [
+    0,
+    1
+  ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 10,
-  "name": "Click loginout link",
+  "line": 8,
+  "name": "Message displayed Login Successfully",
   "keyword": "Then "
 });
-formatter.step({
-  "line": 11,
-  "name": "Account loginout appliction",
-  "keyword": "Then "
+formatter.match({
+  "location": "Parameters.user_is_on_Home_Page()"
 });
-formatter.step({
+formatter.result({
+  "duration": 62428800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Parameters.user_Navigate_to_LogIn_Page()"
+});
+formatter.result({
+  "duration": 35400,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "testuser_1",
+      "offset": 13
+    },
+    {
+      "val": "Test@153",
+      "offset": 30
+    }
+  ],
+  "location": "Parameters.user_enters_and(String,String)"
+});
+formatter.result({
+  "duration": 1318800,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Parameters.message_displayed_Login_Successfully()"
+});
+formatter.result({
+  "duration": 28900,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 61700,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 627635400,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 1282756900,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 61000,
+  "status": "passed"
+});
+formatter.scenario({
   "line": 12,
-  "name": "Close curret borwer",
+  "name": "Successful Login with Valid Credentials",
+  "description": "",
+  "id": "login-action;successful-login-with-valid-credentials;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 1,
+      "name": "@Regression"
+    },
+    {
+      "line": 3,
+      "name": "@Parameters"
+    }
+  ]
+});
+formatter.step({
+  "line": 5,
+  "name": "User is on Home Page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "User Navigate to LogIn Page",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 7,
+  "name": "User enters \"testuser_2\" and \"Test@153\"",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 8,
+  "name": "Message displayed Login Successfully",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "testdfs.user_is_on_Login_Page()"
+  "location": "Parameters.user_is_on_Home_Page()"
 });
 formatter.result({
-  "duration": 18111930800,
+  "duration": 66400,
   "status": "passed"
 });
 formatter.match({
-  "location": "testdfs.user_enters_UserName_and_Password()"
+  "location": "Parameters.user_Navigate_to_LogIn_Page()"
 });
 formatter.result({
-  "duration": 248376200,
+  "duration": 36000,
   "status": "passed"
 });
 formatter.match({
-  "location": "testdfs.click_Login_button()"
+  "arguments": [
+    {
+      "val": "testuser_2",
+      "offset": 13
+    },
+    {
+      "val": "Test@153",
+      "offset": 30
+    }
+  ],
+  "location": "Parameters.user_enters_and(String,String)"
 });
 formatter.result({
-  "duration": 87633200,
+  "duration": 73400,
   "status": "passed"
 });
 formatter.match({
-  "location": "testdfs.he_can_visit_mail_home_page()"
+  "location": "Parameters.message_displayed_Login_Successfully()"
 });
 formatter.result({
-  "duration": 10046286800,
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#useraddr\"}\n  (Session info: chrome\u003d90.0.4430.93)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027DESKTOP-TJK6KB0\u0027, ip: \u0027192.168.2.103\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_191\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.93, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\\Users\\qguan\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:39985}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: a7a22d1f08542db86f76a0d0ddbb3ed6\n*** Element info: {Using\u003did, value\u003duseraddr}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)\r\n\tat stepdefinition.testdfs.he_can_visit_mail_home_page(testdfs.java:52)\r\n\tat ✽.Then He can visit mail home page(logintest.feature:8)\r\n",
-  "status": "failed"
+  "duration": 28600,
+  "status": "passed"
 });
-formatter.match({
-  "location": "testdfs.account_name_is_displayed()"
+formatter.after({
+  "duration": 33600,
+  "status": "passed"
 });
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "testdfs.click_loginout()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "testdfs.account_loginout_success()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "testdfs.close_borwer()"
-});
-formatter.result({
-  "status": "skipped"
+formatter.after({
+  "duration": 643438600,
+  "status": "passed"
 });
 });
