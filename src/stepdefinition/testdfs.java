@@ -1,4 +1,4 @@
-package com.cucumber.stepdefinition;
+package stepdefinition;
 
 import java.util.concurrent.TimeUnit;
 
@@ -9,35 +9,30 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.cucumber.constants.Constants;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class testdfs {
 	WebDriver driver;
+	String text;
 
 	@Given("^User is on Login Page$")
 	public void user_is_on_Login_Page() {
 
 		driver = new ChromeDriver();
+
 		// Maximize the browser's window
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(Constants.baseUrl);
 	}
 
-	// @When("^Click userLoginLink$")
-	// public void clickLoginLink(){
-	//
-	// }
 
 	@When("^User enters UserName and Password$")
 	public void user_enters_UserName_and_Password() {
 
 		driver.switchTo().frame("login_frame");
-
-		driver.findElement(By.xpath("//*[@id='switcher_plogin']")).click();
 
 		WebElement emailField = driver.findElement(By.id("u"));
 		emailField.sendKeys(Constants.account);
@@ -47,21 +42,22 @@ public class testdfs {
 	}
 
 	@When("^Click Login button$")
-	public void click_Login_button() throws InterruptedException {
+	public void click_Login_button() {
 		WebElement goButton = driver.findElement(By.id("login_button"));
 		goButton.click();
-		Thread.sleep(3000);
 	}
 
 	@Then("^He can visit mail home page$")
 	public void he_can_visit_mail_home_page() {
-		WebElement welcomeText = driver.findElement(By
-				.xpath("//b[text()='№叁氛锺熱度']"));
+		text = driver.findElement(By.id("useraddr")).getText();
 	}
 
 	@Then("^Account name is displayed$")
 	public void account_name_is_displayed() {
-		System.out.println("登录成功!");
+		if (text.equals(Constants.account)) {
+			System.out.println("登录成功!");
+		}
+		System.out.println("登录失败");
 	}
 
 	@Then("^Click loginout link$")
