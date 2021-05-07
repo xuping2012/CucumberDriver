@@ -32,7 +32,14 @@ import com.cucumber.listener.ExtentProperties;
 import com.cucumber.managers.FileReaderManager;
 
 /**
- * A cucumber based reporting listener which generates the Extent Report
+ * 
+ * TODO:A cucumber based reporting listener which generates the Extent Report
+ * 
+ * 这是原来Cucumber框架已经封装的类 ，只是因为生成的报告样式过期无法访问，所以自行copy出来自己完善
+ *
+ * @author Joe-Tester
+ * @time 2021年5月7日
+ * @file ExtentCucumberFormatter.java
  */
 public class ExtentCucumberFormatter implements Reporter, Formatter {
 	private static ExtentReports extentReports;
@@ -79,6 +86,9 @@ public class ExtentCucumberFormatter implements Reporter, Formatter {
 		if (extentReports != null) {
 			return;
 		}
+		/**
+		 * 在这里，定义报告中环境的参数
+		 */
 		extentReports = new ExtentReports();
 
 		extentReports.setSystemInfo("User Name",

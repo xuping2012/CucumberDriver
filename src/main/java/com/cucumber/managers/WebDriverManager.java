@@ -10,6 +10,15 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import com.cucumber.enums.DriverType;
 import com.cucumber.enums.EnvironmentType;
 
+
+/**
+ * 
+ * TODO:驱动管理器，实现Singleton模式
+ *
+ * @author Joe-Tester
+ * @time 2021年5月7日
+ * @file WebDriverManager.java
+ */
 public class WebDriverManager {
 	private WebDriver driver;
 	private static DriverType driverType;

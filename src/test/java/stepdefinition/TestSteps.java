@@ -4,6 +4,15 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
+
+/**
+ * 
+ * TODO:feature功能场景用例步骤
+ *
+ * @author Joe-Tester
+ * @time 2021年5月7日
+ * @file TestSteps.java
+ */
 public class TestSteps {
 
 	@Given("^I am in the HR system with \"([^\"]*)\" account$")

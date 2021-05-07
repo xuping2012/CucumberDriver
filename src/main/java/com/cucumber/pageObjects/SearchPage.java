@@ -14,7 +14,7 @@ import com.cucumber.dataProviders.ConfigFileReader;
 
 /**
  * 
- * TODO:PO测试模式，演示@FindBy\@FindAll\@CacheLookup等注解的用法
+ * TODO:PO测试模式，演示@FindBy\@FindAll\@CacheLookup等注解的用法 注意PageFactory设计模式
  *
  * @author Joe-Tester
  * @time 2021年5月6日

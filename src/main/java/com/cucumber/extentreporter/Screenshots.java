@@ -11,6 +11,15 @@ import org.openqa.selenium.WebDriver;
 
 import com.google.common.io.Files;
 
+
+/**
+ * 
+ * TODO:封装了两个类型的截图方法，一个适用于Cucumber框架的报告截图类型
+ *
+ * @author Joe-Tester
+ * @time 2021年5月7日
+ * @file Screenshots.java
+ */
 public class Screenshots {
 
 	public static String takeScreenshot(WebDriver driver, String fileName)

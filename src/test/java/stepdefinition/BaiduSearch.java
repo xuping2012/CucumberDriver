@@ -7,6 +7,15 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
+
+/**
+ * 
+ * TODO:百度搜索的feature功能场景测试
+ *
+ * @author Joe-Tester
+ * @time 2021年5月7日
+ * @file BaiduSearch.java
+ */
 public class BaiduSearch {
 
 	TestContext testContext;
