@@ -42,9 +42,13 @@ public class TestNgRunner extends AbstractTestNGCucumberTests {
 
 	@AfterClass
 	public static void writeExtentReport() throws MalformedURLException {
-		Reporter.getExtentHtmlReport().config().setResourceCDN(ResourceCDN.EXTENTREPORTS);
+		// 静态加载css样式
+		Reporter.getExtentHtmlReport().config()
+				.setResourceCDN(ResourceCDN.EXTENTREPORTS);
+		// 加载配置extentreport报告配置文件
 		Reporter.loadXMLConfig(new File(FileReaderManager.getInstance()
 				.getConfigReader().getReportConfigPath()));
+		// 增加系统信息
 		Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
 		Reporter.setSystemInfo("Time Zone", System.getProperty("user.timezone"));
 		Reporter.setSystemInfo("Machine", "Windows 10" + "64 Bit");

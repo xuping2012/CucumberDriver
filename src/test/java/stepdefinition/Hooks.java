@@ -32,7 +32,9 @@ public class Hooks {
 
 	@Before
 	public void beforeScenario(Scenario scenario) {
-
+		Reporter.assignAuthor("是我写的feature");
+		// 场景日志
+		Reporter.addScenarioLog("场景之前执行" + scenario.getName());
 	}
 
 	@Before
@@ -42,20 +44,16 @@ public class Hooks {
 		 * connections Setting up test data Setting up browser cookies
 		 * Navigating to certain page or anything before the test
 		 */
-		System.out.println("我是执行在所有步骤之前");
 	}
 
 	@After(order = 1)
 	public void AfterSteps(Scenario scenario) {
-		System.out.println("所有测试执行完，我都会执行");
 		// testContext.getWebDriverManager().closeDriver();
 		if (scenario.isFailed()) {
-
+			Reporter.addStepLog("步骤：" + scenario.getName() + "执行错误!!!");
 			// 场景获取场景描述
 			String screenshotName = scenario.getName().replaceAll(" ", "_");
-
 			try {
-
 				// 这个是加入到feature报告中的操作
 				// Take a screenshot...
 				final byte[] screenshot = Screenshots
@@ -74,7 +72,12 @@ public class Hooks {
 			} catch (IOException e) {
 				System.out.println("异常不处理!");
 			}
+		} else {
+			// 步骤日志
+			Reporter.addStepLog("步骤：" + scenario.getId() + scenario.getName()
+					+ "执行成功!!!");
 		}
+
 	}
 
 	@After(order = 0)

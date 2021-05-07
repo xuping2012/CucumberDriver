@@ -38,17 +38,17 @@ public class TestRunner {
 	
 	@BeforeClass
 	public static void setup() {
-		// ExtentHtmlReporter htmlReporter=new
-		// ExtentHtmlReporter("cucumber-reports/html/junit_extent.html");
-		// htmlReporter.config().setResourceCDN(ResourceCDN.EXTENTREPORTS);
 
 	}
 
 	@AfterClass
 	public static void writeExtentReport() throws MalformedURLException {
+		// 静态加载css样式
 		Reporter.getExtentHtmlReport().config().setResourceCDN(ResourceCDN.EXTENTREPORTS);
+		// 加载配置extentreport报告配置文件
 		Reporter.loadXMLConfig(new File(FileReaderManager.getInstance()
 				.getConfigReader().getReportConfigPath()));
+		// 增加系统信息
 		Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
 		Reporter.setSystemInfo("Time Zone", System.getProperty("user.timezone"));
 		Reporter.setSystemInfo("Machine", "Windows 10" + "64 Bit");
