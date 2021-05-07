@@ -32,9 +32,14 @@ public class Hooks {
 
 	@Before
 	public void beforeScenario(Scenario scenario) {
-		Reporter.assignAuthor("是我写的feature");
 		// 场景日志
 		Reporter.addScenarioLog("场景之前执行" + scenario.getName());
+		// 根据场景来划分feature场景是谁写的
+		if (scenario.getName().contains("Login")) {
+			Reporter.assignAuthor("是xxx写的");
+		} else if (scenario.getName().contains("Credentials")) {
+			Reporter.assignAuthor("是yyy写的");
+		}
 	}
 
 	@Before
