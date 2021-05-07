@@ -80,11 +80,11 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 1292495100,
+  "duration": 2048445500,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3205200,
+  "duration": 256300,
   "status": "passed"
 });
 formatter.scenario({
@@ -133,14 +133,14 @@ formatter.match({
   "location": "Parameters.user_is_on_Home_Page()"
 });
 formatter.result({
-  "duration": 62428800,
+  "duration": 614457800,
   "status": "passed"
 });
 formatter.match({
   "location": "Parameters.user_Navigate_to_LogIn_Page()"
 });
 formatter.result({
-  "duration": 35400,
+  "duration": 69100,
   "status": "passed"
 });
 formatter.match({
@@ -157,30 +157,31 @@ formatter.match({
   "location": "Parameters.user_enters_and(String,String)"
 });
 formatter.result({
-  "duration": 1318800,
-  "status": "passed"
+  "duration": 200811600,
+  "error_message": "java.lang.AssertionError: expected [testuser_1] but found [Test@153]\r\n\tat org.testng.Assert.fail(Assert.java:93)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:512)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:134)\r\n\tat org.testng.Assert.assertEquals(Assert.java:115)\r\n\tat org.testng.Assert.assertEquals(Assert.java:189)\r\n\tat org.testng.Assert.assertEquals(Assert.java:199)\r\n\tat stepdefinition.Parameters.user_enters_and(Parameters.java:41)\r\n\tat ✽.And User enters \"testuser_1\" and \"Test@153\"(parameters.feature:7)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "Parameters.message_displayed_Login_Successfully()"
 });
 formatter.result({
-  "duration": 28900,
+  "status": "skipped"
+});
+formatter.embedding("image/png", "embedded0.png");
+formatter.after({
+  "duration": 360676000,
   "status": "passed"
 });
 formatter.after({
-  "duration": 61700,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 627635400,
+  "duration": 751773300,
   "status": "passed"
 });
 formatter.before({
-  "duration": 1282756900,
+  "duration": 1325724300,
   "status": "passed"
 });
 formatter.before({
-  "duration": 61000,
+  "duration": 149800,
   "status": "passed"
 });
 formatter.scenario({
@@ -229,14 +230,14 @@ formatter.match({
   "location": "Parameters.user_is_on_Home_Page()"
 });
 formatter.result({
-  "duration": 66400,
+  "duration": 664256200,
   "status": "passed"
 });
 formatter.match({
   "location": "Parameters.user_Navigate_to_LogIn_Page()"
 });
 formatter.result({
-  "duration": 36000,
+  "duration": 181700,
   "status": "passed"
 });
 formatter.match({
@@ -253,22 +254,23 @@ formatter.match({
   "location": "Parameters.user_enters_and(String,String)"
 });
 formatter.result({
-  "duration": 73400,
-  "status": "passed"
+  "duration": 208683200,
+  "error_message": "java.lang.AssertionError: expected [testuser_2] but found [Test@153]\r\n\tat org.testng.Assert.fail(Assert.java:93)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:512)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:134)\r\n\tat org.testng.Assert.assertEquals(Assert.java:115)\r\n\tat org.testng.Assert.assertEquals(Assert.java:189)\r\n\tat org.testng.Assert.assertEquals(Assert.java:199)\r\n\tat stepdefinition.Parameters.user_enters_and(Parameters.java:41)\r\n\tat ✽.And User enters \"testuser_2\" and \"Test@153\"(parameters.feature:7)\r\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "Parameters.message_displayed_Login_Successfully()"
 });
 formatter.result({
-  "duration": 28600,
+  "status": "skipped"
+});
+formatter.embedding("image/png", "embedded1.png");
+formatter.after({
+  "duration": 333122600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 33600,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 643438600,
+  "duration": 783962100,
   "status": "passed"
 });
 });

@@ -34,6 +34,7 @@ public class SearchSteps {
 	public void close_browser() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		testContext.getWebDriverManager().closeDriver();
+		
 	}
 
 }

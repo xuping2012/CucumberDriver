@@ -3,20 +3,20 @@ package runners;
 import java.io.File;
 import java.net.MalformedURLException;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.runner.RunWith;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 import com.aventstack.extentreports.ResourceCDN;
 import com.cucumber.listener.Reporter;
 import com.cucumber.managers.FileReaderManager;
 
 import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+// 继承testng抽象类
+import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 /**
  * 
- * TODO:junit集成cucumber
+ * TODO:TestNG集成cucumber
  * 
  * 
  * 注解@CucumberOptions features指向自然语言脚本的包名，也可以是feature文件的绝对路径
@@ -26,21 +26,17 @@ import cucumber.api.junit.Cucumber;
  * @time 2021年5月6日
  * @file TestRun.java
  */
-@RunWith(Cucumber.class)
+
 @CucumberOptions(monochrome = true, tags = { "@Parameters" }, features = "src/test/features", glue = { "stepdefinition" }, plugin = {
 		"pretty",
 		"json:cucumber-reports/Cucumber.json",
 		"junit:cucumber-reports/Cucumber.xml",
-		"html:cucumber-reports/Jhtml",
-		"com.cucumber.listener.ExtentCucumberFormatter:cucumber-reports/Jhtml/junit_extent.html" })
-public class TestRunner {
+		"html:cucumber-reports/Thtml",
+		"com.cucumber.listener.ExtentCucumberFormatter:cucumber-reports/Thtml/testng_extent.html" })
+public class TestNgRunner extends AbstractTestNGCucumberTests {
 
-	
 	@BeforeClass
 	public static void setup() {
-		// ExtentHtmlReporter htmlReporter=new
-		// ExtentHtmlReporter("cucumber-reports/html/junit_extent.html");
-		// htmlReporter.config().setResourceCDN(ResourceCDN.EXTENTREPORTS);
 
 	}
 
@@ -57,4 +53,5 @@ public class TestRunner {
 		Reporter.setSystemInfo("Java Version", "1.8.0_151");
 
 	}
+
 }

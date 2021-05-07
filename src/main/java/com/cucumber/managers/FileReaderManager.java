@@ -2,7 +2,6 @@ package com.cucumber.managers;
 
 import com.cucumber.dataProviders.ConfigFileReader;
 
-
 /**
  * 
  * TODO:文件作为Singleton FileReaderManager类维护对其自身实例的静态引用，并从静态getInstance（）方法返回该引用。
@@ -16,6 +15,7 @@ import com.cucumber.dataProviders.ConfigFileReader;
  * @file FileReaderManager.java
  */
 public class FileReaderManager {
+
 	private static FileReaderManager fileReaderManager = new FileReaderManager();
 	private static ConfigFileReader configFileReader;
 

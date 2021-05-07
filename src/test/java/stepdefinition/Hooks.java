@@ -1,24 +1,32 @@
 package stepdefinition;
 
-import java.io.File;
 import java.io.IOException;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-
+import com.aventstack.extentreports.ExtentTest;
 import com.cucumber.contexts.TestContext;
+import com.cucumber.extentreporter.Screenshots;
 import com.cucumber.listener.Reporter;
-import com.google.common.io.Files;
 
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
-public class HooksTest {
+/**
+ * 
+ * TODO:Cucumber框架的hooks只支持After、Before;且是方法级别； 所以针对方法需要做环境前后处理，再此处完成；
+ * 但是在runner启动器是类级别的，及一个用例类执行前后的操作。
+ *
+ * @author Joe-Tester
+ * @time 2021年5月7日
+ * @file Hooks.java
+ */
+public class Hooks {
 
 	TestContext testContext;
+	ExtentTest test;
 
-	public HooksTest(TestContext context) {
+	// 做一个测试上下文
+	public Hooks(TestContext context) {
 		testContext = context;
 	}
 
@@ -35,7 +43,6 @@ public class HooksTest {
 		 * Navigating to certain page or anything before the test
 		 */
 		System.out.println("我是执行在所有步骤之前");
-		Reporter.assignAuthor("ToolsQA - Lakshay Sharma");
 	}
 
 	@After(order = 1)
@@ -43,36 +50,35 @@ public class HooksTest {
 		System.out.println("所有测试执行完，我都会执行");
 		// testContext.getWebDriverManager().closeDriver();
 		if (scenario.isFailed()) {
+
+			// 场景获取场景描述
 			String screenshotName = scenario.getName().replaceAll(" ", "_");
+
 			try {
+
+				// 这个是加入到feature报告中的操作
+				// Take a screenshot...
+				final byte[] screenshot = Screenshots
+						.takeScreenshot(testContext.getWebDriverManager()
+								.getDriver());
+				// ... and embed it in the report.
+				scenario.embed(screenshot, "image/png");
+
+				// 封装的截图方法，然后添加的报告中去
 				// This takes a screenshot from the driver at save it to the
 				// specified location
-				File sourcePath = ((TakesScreenshot) testContext
-						.getWebDriverManager().getDriver())
-						.getScreenshotAs(OutputType.FILE);
-
-				// Building up the destination path for the screenshot to save
-				// Also make sure to create a folder 'screenshots' with in the
-				// cucumber-report folder
-				File destinationPath = new File(System.getProperty("user.dir")
-						+ "/target/cucumber-reports/screenshots/"
-						+ screenshotName + ".png");
-
-				// Copy taken screenshot from source location to destination
-				// location
-				Files.copy(sourcePath, destinationPath);
-
-				// This attach the specified screenshot to the test
-				Reporter.addScreenCaptureFromPath(destinationPath.toString());
+				// 如果不封装，可以将代码移至此处
+				String destinationPath = Screenshots.takeScreenshot(testContext
+						.getWebDriverManager().getDriver(), screenshotName);
+				Reporter.addScreenCaptureFromPath(destinationPath);
 			} catch (IOException e) {
+				System.out.println("异常不处理!");
 			}
 		}
-
 	}
 
 	@After(order = 0)
 	public void AfterSteps() {
 		testContext.getWebDriverManager().closeDriver();
 	}
-
 }
