@@ -46,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>May 7, 2021 05:30:53 PM</span>
+                    <span class='label suite-start-time blue darken-3'>May 7, 2021 07:11:29 PM</span>
 				</a>
 			</li>
 			<li>
@@ -87,7 +87,7 @@
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>@Regression</a></li>
-					<li><a href='#'>@Parameters</a></li>
+					<li><a href='#'>@DataProvider</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -153,7 +153,7 @@
 					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>2</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -165,10 +165,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>4</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='20%'><span class='strong'>1</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='25%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='25%'>2</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='20%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='60%'>3</span> others
 				</div>
 			</div>
 		</div>
@@ -184,97 +184,56 @@
 				
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Login Action</span>
-						<span class='test-time'>May 7, 2021 05:30:53 PM</span>
+						<span class='test-name'>Automated End2End Tests</span>
+						<span class='test-time'>May 7, 2021 07:11:29 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenariooutline node' test-id='2' status='fail'>
-	<span class='duration right label'>0h 0m 6s+291ms</span>
+	<span class='duration right label'>0h 0m 2s+263ms</span>
 	<div class='desc'>
 		<b>ScenarioOutline</b>
-		<span class="desc-text">Successful Login with Valid Credentials</span>
+		<span class="desc-text">Customer place an order by purchasing an item from search</span>
 	</div>
 	<ul class='steps'>
 		<li test-id='3' class='node scenario fail' status='fail'>
 			<div class='category-list'>
+				<span class='category label white-text'>@DataProvider</span>
 				<span class='category label white-text'>@Regression</span>
-				<span class='category label white-text'>@Parameters</span>
 			</div>
 			
 			<b>Scenario</b>
 			
-			<span class="bdd-step-name">Successful Login with Valid Credentials</span>
+			<span class="bdd-step-name">Customer place an order by purchasing an item from search</span>
+				<div class='pre'>场景之前执行Customer place an order by purchasing an item from search</div>
 			
 				<ul class='steps'>
 					<li test-id='4' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given User is on Home Page</span>
+						<span class="bdd-step-name">Given user is on Home Page</span>
 							<div class='pre'>passed</div>
 					</li>
-					<li test-id='5' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When User Navigate to LogIn Page</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='6' class='node and fail' status='fail'><b>And</b>
-						<span class="bdd-step-name">And User enters "testuser_1" and "Test@153"</span>
-							<div class='pre'><pre>java.lang.AssertionError: expected [testuser_1] but found [Test@153]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at org.testng.Assert.assertEquals(Assert.java:199)
-	at stepdefinition.Parameters.user_enters_and(Parameters.java:41)
-	at ✽.And User enters "testuser_1" and "Test@153"(parameters.feature:7)
+					<li test-id='5' class='node when fail' status='fail'><b>When</b>
+						<span class="bdd-step-name">When enter "Lakshay" personal details on checkout page</span>
+							<div class='pre'><pre>java.lang.NullPointerException
+	at stepdefinition.DataProvider.enter_personal_details_on_checkout_page(DataProvider.java:41)
+	at ✽.When enter "Lakshay" personal details on checkout page(dataProvider.feature:7)
 </pre></div>
 					</li>
-					<li test-id='7' class='node then skip' status='skip'><b>Then</b>
-						<span class="bdd-step-name">Then Message displayed Login Successfully</span>
-						<ul class='screenshots right'>
-							<li><a data-featherlight="image" href="D:\javaworkspace\CucumberDriver\cucumber-reports\screenshots\Successful_Login_with_Valid_Credentials_20210507173056.png"><i class='material-icons'>panorama</i></a></li>
-						</ul>
+					<li test-id='6' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And select same delivery address</span>
 							<div class='pre'>skipped</div>
 					</li>
-				</ul>
-		</li>
-		<li test-id='8' class='node scenario fail' status='fail'>
-			<div class='category-list'>
-				<span class='category label white-text'>@Regression</span>
-				<span class='category label white-text'>@Parameters</span>
-			</div>
-			
-			<b>Scenario</b>
-			
-			<span class="bdd-step-name">Successful Login with Valid Credentials</span>
-			
-				<ul class='steps'>
-					<li test-id='9' class='node given pass' status='pass'><b>Given</b>
-						<span class="bdd-step-name">Given User is on Home Page</span>
-							<div class='pre'>passed</div>
+					<li test-id='7' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And select payment method as "check" payment</span>
+							<div class='pre'>skipped</div>
 					</li>
-					<li test-id='10' class='node when pass' status='pass'><b>When</b>
-						<span class="bdd-step-name">When User Navigate to LogIn Page</span>
-							<div class='pre'>passed</div>
-					</li>
-					<li test-id='11' class='node and fail' status='fail'><b>And</b>
-						<span class="bdd-step-name">And User enters "testuser_2" and "Test@153"</span>
-							<div class='pre'><pre>java.lang.AssertionError: expected [testuser_2] but found [Test@153]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at org.testng.Assert.assertEquals(Assert.java:199)
-	at stepdefinition.Parameters.user_enters_and(Parameters.java:41)
-	at ✽.And User enters "testuser_2" and "Test@153"(parameters.feature:7)
-</pre></div>
-					</li>
-					<li test-id='12' class='node then skip' status='skip'><b>Then</b>
-						<span class="bdd-step-name">Then Message displayed Login Successfully</span>
+					<li test-id='8' class='node and skip' status='skip'><b>And</b>
+						<span class="bdd-step-name">And place the order</span>
 						<ul class='screenshots right'>
-							<li><a data-featherlight="image" href="D:\javaworkspace\CucumberDriver\cucumber-reports\screenshots\Successful_Login_with_Valid_Credentials_20210507173100.png"><i class='material-icons'>panorama</i></a></li>
+							<li><a data-featherlight="image" href="D:\javaworkspace\CucumberDriver\cucumber-reports\screenshots\Customer_place_an_order_by_purchasing_an_item_from_search_20210507191131.png"><i class='material-icons'>panorama</i></a></li>
 						</ul>
 							<div class='pre'>skipped</div>
+							<div class='pre'>步骤：Customer place an order by purchasing an item from search执行错误!!!</div>
 					</li>
 				</ul>
 		</li>
@@ -336,50 +295,6 @@
 					<div class='category-heading'>
 						<span class='category-name'>@Regression</span>
 						<span class='category-status right'>
-							<span class='label fail'>3</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							
-							<span class='label red lighten-1 white-text'>Failed: 3</span>
-							
-						</div>
-					
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>May 7, 2021 05:30:53 PM</td>
-										<td class='linked' test-id='1'>Login Action</td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>May 7, 2021 05:30:53 PM</td>
-										<td class='linked' test-id='3'>Login Action.Successful Login with Valid Credentials.Successful Login with Valid Credentials</td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-									<tr>
-										<td>May 7, 2021 05:30:57 PM</td>
-										<td class='linked' test-id='8'>Login Action.Successful Login with Valid Credentials.Successful Login with Valid Credentials</td>
-										<td><span class='test-status fail'>fail</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@Parameters</span>
-						<span class='category-status right'>
 							<span class='label fail'>2</span>
 						</span>
 					</div>
@@ -401,13 +316,47 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>May 7, 2021 05:30:53 PM</td>
-										<td class='linked' test-id='3'>Login Action.Successful Login with Valid Credentials.Successful Login with Valid Credentials</td>
+										<td>May 7, 2021 07:11:29 PM</td>
+										<td class='linked' test-id='1'>Automated End2End Tests</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>May 7, 2021 05:30:57 PM</td>
-										<td class='linked' test-id='8'>Login Action.Successful Login with Valid Credentials.Successful Login with Valid Credentials</td>
+										<td>May 7, 2021 07:11:29 PM</td>
+										<td class='linked' test-id='3'>Automated End2End Tests.Customer place an order by purchasing an item from search.Customer place an order by purchasing an item from search</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@DataProvider</span>
+						<span class='category-status right'>
+							<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 7, 2021 07:11:29 PM</td>
+										<td class='linked' test-id='3'>Automated End2End Tests.Customer place an order by purchasing an item from search.Customer place an order by purchasing an item from search</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 								</tbody>
@@ -454,8 +403,8 @@
 
                         <li class='exception displayed active'>
                             <div class='exception-heading'>
-                                <span class='exception-name'>java.lang.AssertionError</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
+                                <span class='exception-name'>java.lang.NullPointerException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
                             </div>
                             <div class='exception-content hide'>
                                 <div class='exception-tests'>
@@ -469,31 +418,11 @@
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>May 7, 2021 05:30:56 PM</td>
-                                                        <td class='linked' test-id='6'>Login Action.Successful Login with Valid Credentials.Successful Login with Valid Credentials.And User enters "testuser_1" and "Test@153"</td>
-                                                        <td><pre><pre>java.lang.AssertionError: expected [testuser_1] but found [Test@153]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at org.testng.Assert.assertEquals(Assert.java:199)
-	at stepdefinition.Parameters.user_enters_and(Parameters.java:41)
-	at ✽.And User enters "testuser_1" and "Test@153"(parameters.feature:7)
-</pre></pre></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>May 7, 2021 05:30:59 PM</td>
-                                                        <td class='linked' test-id='11'>Login Action.Successful Login with Valid Credentials.Successful Login with Valid Credentials.And User enters "testuser_2" and "Test@153"</td>
-                                                        <td><pre><pre>java.lang.AssertionError: expected [testuser_2] but found [Test@153]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at org.testng.Assert.assertEquals(Assert.java:199)
-	at stepdefinition.Parameters.user_enters_and(Parameters.java:41)
-	at ✽.And User enters "testuser_2" and "Test@153"(parameters.feature:7)
+                                                        <td>May 7, 2021 07:11:31 PM</td>
+                                                        <td class='linked' test-id='5'>Automated End2End Tests.Customer place an order by purchasing an item from search.Customer place an order by purchasing an item from search.When enter "Lakshay" personal details on checkout page</td>
+                                                        <td><pre><pre>java.lang.NullPointerException
+	at stepdefinition.DataProvider.enter_personal_details_on_checkout_page(DataProvider.java:41)
+	at ✽.When enter "Lakshay" personal details on checkout page(dataProvider.feature:7)
 </pre></pre></td>
                                                     </tr>
                                         </tbody>
@@ -526,31 +455,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>8</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>May 7, 2021 05:30:53 PM</div>
+					<div class='panel-lead'>May 7, 2021 07:11:29 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>May 7, 2021 05:31:01 PM</div>
+			 		<div class='panel-lead'>May 7, 2021 07:11:32 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>7,523ms</div>
+					<div class='panel-lead'>3,290ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -603,13 +532,13 @@
 						<tr>
 							<td>@Regression</td>
 							<td>0</td>
-							<td>3</td>
+							<td>2</td>
 							<td>0</td>
 						</tr>
 						<tr>
-							<td>@Parameters</td>
+							<td>@DataProvider</td>
 							<td>0</td>
-							<td>2</td>
+							<td>1</td>
 							<td>0</td>
 						</tr>
 					</table>
@@ -634,20 +563,20 @@
 				exceptionsParent: 1,
 				
 				passChild: 0,
-				failChild: 2,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				exceptionsChild: 2,
+				exceptionsChild: 1,
 				
-				passGrandChild: 4,
-				failGrandChild: 2,
+				passGrandChild: 1,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 2,
+				skipGrandChild: 3,
 				infoGrandChild: 0,
 				exceptionsGrandChild: 4,
 			};

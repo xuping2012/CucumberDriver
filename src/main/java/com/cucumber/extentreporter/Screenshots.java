@@ -44,6 +44,11 @@ public class Screenshots {
 		return destination;
 	}
 
+	/**
+	 * 这个方法是给Cucumber框架默认生成index.html报告用的，不是extentreport的报告
+	 * @param driver
+	 * @return
+	 */
 	public static byte[] takeScreenshot(WebDriver driver) {
 		final byte[] screenshot = ((TakesScreenshot) driver)
 				.getScreenshotAs(OutputType.BYTES);

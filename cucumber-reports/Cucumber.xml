@@ -1,38 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="16.039238">
-<testcase classname="Login Action" name="Successful Login with Valid Credentials" time="8.527913">
-<failure message="java.lang.AssertionError: expected [testuser_1] but found [Test@153]&#13;&#10;&#9;at org.testng.Assert.fail(Assert.java:93)&#13;&#10;&#9;at org.testng.Assert.failNotEquals(Assert.java:512)&#13;&#10;&#9;at org.testng.Assert.assertEqualsImpl(Assert.java:134)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:189)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:199)&#13;&#10;&#9;at stepdefinition.Parameters.user_enters_and(Parameters.java:41)&#13;&#10;&#9;at ✽.And User enters &quot;testuser_1&quot; and &quot;Test@153&quot;(parameters.feature:7)&#13;&#10;"><![CDATA[Given User is on Home Page..................................................passed
-When User Navigate to LogIn Page............................................passed
-And User enters "testuser_1" and "Test@153".................................failed
-Then Message displayed Login Successfully...................................skipped
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="3.107466">
+<testcase classname="Automated End2End Tests" name="Customer place an order by purchasing an item from search" time="3.107466">
+<failure message="java.lang.NullPointerException&#13;&#10;&#9;at stepdefinition.DataProvider.enter_personal_details_on_checkout_page(DataProvider.java:41)&#13;&#10;&#9;at ✽.When enter &quot;Lakshay&quot; personal details on checkout page(dataProvider.feature:7)&#13;&#10;"><![CDATA[Given user is on Home Page..................................................passed
+When enter "Lakshay" personal details on checkout page......................failed
+And select same delivery address............................................skipped
+And select payment method as "check" payment................................skipped
+And place the order.........................................................skipped
 
 StackTrace:
-java.lang.AssertionError: expected [testuser_1] but found [Test@153]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at org.testng.Assert.assertEquals(Assert.java:199)
-	at stepdefinition.Parameters.user_enters_and(Parameters.java:41)
-	at ✽.And User enters "testuser_1" and "Test@153"(parameters.feature:7)
-]]></failure>
-</testcase>
-<testcase classname="Login Action" name="Successful Login with Valid Credentials 2" time="7.511325">
-<failure message="java.lang.AssertionError: expected [testuser_2] but found [Test@153]&#13;&#10;&#9;at org.testng.Assert.fail(Assert.java:93)&#13;&#10;&#9;at org.testng.Assert.failNotEquals(Assert.java:512)&#13;&#10;&#9;at org.testng.Assert.assertEqualsImpl(Assert.java:134)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:189)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:199)&#13;&#10;&#9;at stepdefinition.Parameters.user_enters_and(Parameters.java:41)&#13;&#10;&#9;at ✽.And User enters &quot;testuser_2&quot; and &quot;Test@153&quot;(parameters.feature:7)&#13;&#10;"><![CDATA[Given User is on Home Page..................................................passed
-When User Navigate to LogIn Page............................................passed
-And User enters "testuser_2" and "Test@153".................................failed
-Then Message displayed Login Successfully...................................skipped
-
-StackTrace:
-java.lang.AssertionError: expected [testuser_2] but found [Test@153]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at org.testng.Assert.assertEquals(Assert.java:199)
-	at stepdefinition.Parameters.user_enters_and(Parameters.java:41)
-	at ✽.And User enters "testuser_2" and "Test@153"(parameters.feature:7)
+java.lang.NullPointerException
+	at stepdefinition.DataProvider.enter_personal_details_on_checkout_page(DataProvider.java:41)
+	at ✽.When enter "Lakshay" personal details on checkout page(dataProvider.feature:7)
 ]]></failure>
 </testcase>
 </testsuite>

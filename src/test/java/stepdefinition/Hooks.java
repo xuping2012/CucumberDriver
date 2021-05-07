@@ -25,7 +25,7 @@ public class Hooks {
 	TestContext testContext;
 	ExtentTest test;
 
-	// 做一个测试上下文
+	// 做一个测试上下文;每次启动都会打开一次浏览器
 	public Hooks(TestContext context) {
 		testContext = context;
 	}

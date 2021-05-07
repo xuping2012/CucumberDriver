@@ -27,7 +27,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
  * @file TestRun.java
  */
 
-@CucumberOptions(monochrome = true, tags = { "@Parameters" }, features = "src/test/features", glue = { "stepdefinition" }, plugin = {
+@CucumberOptions(monochrome = true, tags = { "@DataProvider" }, features = "src/test/features", glue = { "stepdefinition" }, plugin = {
 		"pretty",
 		"json:cucumber-reports/Cucumber.json",
 		"junit:cucumber-reports/Cucumber.xml",
