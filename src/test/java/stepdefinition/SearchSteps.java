@@ -6,6 +6,15 @@ import com.cucumber.pageObjects.SearchPage;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
+
+/**
+ * 
+ * TODO:feature功能场景用例步骤
+ *
+ * @author Joe-Tester
+ * @time 2021年5月7日
+ * @file SearchSteps.java
+ */
 public class SearchSteps {
 
 	private TestContext testContext;

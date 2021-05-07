@@ -9,6 +9,15 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
+
+/**
+ * 
+ * TODO:feature功能场景用例步骤
+ *
+ * @author Joe-Tester
+ * @time 2021年5月7日
+ * @file Parameters.java
+ */
 public class Parameters {
 
 	private TestContext testContext;
