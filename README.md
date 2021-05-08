@@ -64,3 +64,34 @@ PageObject页面对象模式设计、WebDriverManager管理器实现Singleton设
 	<version>2.40.2</version>
 </dependency>
 ```
+### 中文用法
+- 众所周知cucumber的feature支持中文描述
+- - 即@Given对应@假如，可以去cucumber-java的语言包源码可以查看
+```
+$ script/cucumber --i18n zh-CN  
+      | feature          | "功能"       |  
+      | background       | "背景"       |  
+      | scenario         | "场景"       |  
+      | scenario_outline | "场景大纲"     |  
+      | examples         | "例子"       |  
+      | given            | "* ", "假如" |  
+      | when             | "* ", "当"  |  
+      | then             | "* ", "那么" |  
+      | and              | "* ", "而且" |  
+      | but              | "* ", "但是" |  
+      | given (code)     | "假如"       |  
+      | when (code)      | "当"        |  
+      | then (code)      | "那么"       |  
+      | and (code)       | "而且"       |  
+      | but (code)       | "但是"       |  
+```
+- feature支持中文示例：
+```
+# language: zh-CN  
+功能: 测试是否支持中文
+场景: 这是一个神奇的feature
+假如 让你使用中文写步骤
+当 程序支持中文时
+那么 输出的就是中文
+```
+- 是不是很有意思!!!
