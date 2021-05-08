@@ -46,4 +46,10 @@ public class TestSteps {
 		// Write code here that turns the phrase above into concrete actions
 		System.out.println(arg1);
 	}
+	
+	@Given("^打开系统$")
+	public void 打开系统() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    System.out.println("测试中文");
+	}
 }

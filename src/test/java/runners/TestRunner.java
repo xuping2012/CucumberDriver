@@ -27,7 +27,7 @@ import cucumber.api.junit.Cucumber;
  * @file TestRun.java
  */
 @RunWith(Cucumber.class)
-@CucumberOptions(monochrome = true, tags = { "@Parameters" }, features = "src/test/features", glue = { "stepdefinition" }, plugin = {
+@CucumberOptions(monochrome = true, tags = { "@Chinese" }, features = "src/test/features", glue = { "stepdefinition" }, plugin = {
 		"pretty",
 		"json:cucumber-reports/Cucumber.json",
 		"junit:cucumber-reports/Cucumber.xml",
@@ -35,7 +35,6 @@ import cucumber.api.junit.Cucumber;
 		"com.cucumber.listener.ExtentCucumberFormatter:cucumber-reports/Jhtml/junit_extent.html" })
 public class TestRunner {
 
-	
 	@BeforeClass
 	public static void setup() {
 
@@ -44,17 +43,19 @@ public class TestRunner {
 	@AfterClass
 	public static void writeExtentReport() throws MalformedURLException {
 		// 静态加载css样式
-		Reporter.getExtentHtmlReport().config().setResourceCDN(ResourceCDN.EXTENTREPORTS);
+		Reporter.getExtentHtmlReport().config()
+				.setResourceCDN(ResourceCDN.EXTENTREPORTS);
 		// 加载配置extentreport报告配置文件
 		Reporter.loadXMLConfig(new File(FileReaderManager.getInstance()
 				.getConfigReader().getReportConfigPath()));
 		// 增加系统信息
-		Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
-		Reporter.setSystemInfo("Time Zone", System.getProperty("user.timezone"));
-		Reporter.setSystemInfo("Machine", "Windows 10" + "64 Bit");
-		Reporter.setSystemInfo("Selenium", "3.7.0");
-		Reporter.setSystemInfo("Maven", "3.5.2");
-		Reporter.setSystemInfo("Java Version", "1.8.0_151");
+		// Reporter.setSystemInfo("User Name", System.getProperty("user.name"));
+		// Reporter.setSystemInfo("Time Zone",
+		// System.getProperty("user.timezone"));
+		// Reporter.setSystemInfo("Machine", "Windows 10" + "64 Bit");
+		// Reporter.setSystemInfo("Selenium", "3.7.0");
+		// Reporter.setSystemInfo("Maven", "3.5.2");
+		// Reporter.setSystemInfo("Java Version", "1.8.0_151");
 
 	}
 }

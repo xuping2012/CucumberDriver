@@ -1,15 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="3.107466">
-<testcase classname="Automated End2End Tests" name="Customer place an order by purchasing an item from search" time="3.107466">
-<failure message="java.lang.NullPointerException&#13;&#10;&#9;at stepdefinition.DataProvider.enter_personal_details_on_checkout_page(DataProvider.java:41)&#13;&#10;&#9;at ✽.When enter &quot;Lakshay&quot; personal details on checkout page(dataProvider.feature:7)&#13;&#10;"><![CDATA[Given user is on Home Page..................................................passed
-When enter "Lakshay" personal details on checkout page......................failed
-And select same delivery address............................................skipped
-And select payment method as "check" payment................................skipped
-And place the order.........................................................skipped
-
-StackTrace:
-java.lang.NullPointerException
-	at stepdefinition.DataProvider.enter_personal_details_on_checkout_page(DataProvider.java:41)
-	at ✽.When enter "Lakshay" personal details on checkout page(dataProvider.feature:7)
-]]></failure>
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="3.072234">
+<testcase classname="test system login" name="login successful" time="3.072234">
+<skipped><![CDATA[Given open system...........................................................undefined
+When enter string...........................................................undefined
+And click btn...............................................................undefined
+Then toast a................................................................undefined
+]]></skipped>
 </testcase>
 </testsuite>
