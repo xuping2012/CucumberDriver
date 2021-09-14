@@ -1,6 +1,6 @@
 ### cucumber框架
 - 很不错的学习地址：https://www.toolsqa.com/cucumber-automation-framework/
-- 介绍详细：
+- BDD介绍详细：
 ```
 从End2End测试用例开始，层层引入，从配置文件读取器开始、实现Singleton单例模式设计;
 PageObject页面对象模式设计、WebDriverManager管理器实现Singleton设计等等；
